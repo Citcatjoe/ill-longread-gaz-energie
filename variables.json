@@ -1,0 +1,15 @@
+{
+	"title": "Vacances en famille: enfer ou paradis?",
+	"description": "Les vacances, cela fait du bien à tout le monde… A condition qu’elles soient choisies et non imposées. C’est ce sur quoi Nahum Frenck, le fameux thérapeute lausannois, insiste lorsqu’on lui pose cette question toute bête: est-ce que ça fait du bien aux familles de partir en vacances?",
+	"authors": "François Busson, César Greppin",
+	"imgSocial": "social.jpg",   
+
+	"navBarStyle": "normal",
+	"navBarOffset": "0",
+	"navBarLocked": false,
+
+	"partner": {
+		"logo": "img/empty.png",
+		"link": "https://www.illustre.ch/"
+	}
+}
