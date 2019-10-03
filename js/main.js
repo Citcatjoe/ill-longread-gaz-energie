@@ -9,250 +9,169 @@ jQuery(document).ready(function($)
 
 	//********************************************************************************
 	
-	city1Tl = new TimelineMax({ paused: true });
+	mainTl = new TimelineMax(),
+    $baloonz = $('svg.baloonz'),
+    $baloonzBlue = $baloonz.find('#blue_x5F_baloon'),
+    $baloonzBlueTxt = $baloonz.find('#blue_x5F_text'),
+    $baloonzRed = $baloonz.find('#red_x5F_baloon'),
+    $baloonzRedTxt = $baloonz.find('#red_x5F_text'),
+    $sceneBaloonzCap1 = $('.scene-baloonz-cap1'),
+    $sceneBaloonzCap2 = $('.scene-baloonz-cap2');
 
-	var $citySection = $('.city-section.city1');
-	var $city = $citySection.find('.city');
-	var $cityOverlay = $city.find('.city-overlay');
-	var $cityTitle = $city.find('.city-title');
-	var $cityBullets = $city.find('li');
-	var $cityBtn = $city.find('button');
+    clearStage();
+    function clearStage() {
+        var clearTl = new TimelineMax();
 
-	clearLisbonne();
+        clearTl
+            .set($baloonzBlue, { scale: 0, transformOrigin: "center center" })
+            .set($baloonzBlueTxt, { autoAlpha: 0, transformOrigin: "center center" })
+            .set($baloonzRed, { scale: 0, transformOrigin: "center bottom" })
+            .set($baloonzRedTxt, { autoAlpha: 0, transformOrigin: "center center" })
+            .set($sceneBaloonzCap1, { autoAlpha: 0, transformOrigin: "center center" })
+            .set($sceneBaloonzCap2, { autoAlpha: 0, transformOrigin: "center center" });
+           
 
-	function clearLisbonne() {
-      var clearcity1Tl = new TimelineMax();
-
-      clearcity1Tl
-       .set($citySection, { height: '0px', transformOrigin: "center center" })
-		.set($city, { opacity: 0, transformOrigin: "center center" })
-		.set($cityTitle, { autoAlpha: 0, x: 30, transformOrigin: "center center" })
-		.set($cityBullets, { autoAlpha: 0, x: 30, transformOrigin: "center center" })
-		.set($cityBtn, { autoAlpha: 0, transformOrigin: "center center" });
-        
-      return clearcity1Tl;
+        return clearTl;
     }
 
-	var chartController = new ScrollMagic.Controller();
+    var controller = new ScrollMagic.Controller();
+    var step = 1000;
 
-	new ScrollMagic.Scene({
-    triggerElement: ".triggerCity1",
-    triggerHook: 0.5,
-    duration: 1
- 	})
-    .offset(0) //tip top
-    .on('enter', function (e) {
-      //alert('coucou');
-      city1Tl.play();
+     // build scene
+    new ScrollMagic.Scene({
+        triggerElement: 'section.scene-baloonz',
+        triggerHook: .0,
+        duration: step * 5.5
     })
-    .addIndicators()
-    .addTo(chartController);
+        .setPin('section.scene-baloonz', { pushFollowers: true })
+        .offset(0)
+        .addIndicators()
+        .addTo(controller);
 
-    city1Tl
-		.to($citySection, 0.75, {height: '400px', paddingTop: '50px', paddingBottom: '50px', ease: Power2.easeOut})
-		.to($city, 0.75, {opacity: 1, ease: Power2.easeOut}, '-=0.3')
-		.to($cityOverlay, 0.5, {autoAlpha: 0, ease: Power2.easeOut}, '-=0.5')
-		.to($cityTitle, 1, {autoAlpha: 1, x: 0, ease: Power4.easeOut})
-		.staggerTo($cityBullets, 1, {autoAlpha: 1, x: 0, ease: Power4.easeOut}, 0.5, '-=0.25')
-		.to($cityBtn, 1, {autoAlpha: 1, ease: Power4.easeOut}, '-=0.5');
-	
-	//********************************************************************************
+    new ScrollMagic.Scene({
+      triggerElement: "section.scene-baloonz",
+      triggerHook: .0,
+      duration: step
+    })
+      .setTween($baloonzBlue, { scale: 1, ease: Power0.easeNone })
+      .offset(step * 0) //VOLONTAIRE
+      .addTo(controller);
 
-	city2Tl = new TimelineMax({ paused: true });
+			  new ScrollMagic.Scene({
+			  triggerElement: "section.scene-baloonz",
+			  triggerHook: .0,
+			  duration: step / 2
+		    })
+		      .setTween($baloonzBlueTxt, { autoAlpha: 1, ease: Power0.easeNone })
+		      .offset(step * 1) //VOLONTAIRE
+		      .addTo(controller);
 
-	var $citySection = $('.city-section.city2');
-	var $city = $citySection.find('.city');
-	var $cityOverlay = $city.find('.city-overlay');
-	var $cityTitle = $city.find('.city-title');
-	var $cityBullets = $city.find('li');
-	var $cityBtn = $city.find('button');
+		      new ScrollMagic.Scene({
+			  triggerElement: "section.scene-baloonz",
+			  triggerHook: .0,
+			  duration: step / 2
+		    })
+		      .setTween($sceneBaloonzCap1, { autoAlpha: 1, ease: Power0.easeNone })
+		      .offset(step * 1) //VOLONTAIRE
+		      .addTo(controller);
 
-	clearLisbonne();
+    new ScrollMagic.Scene({
+    triggerElement: "section.scene-baloonz",
+    triggerHook: .0,
+    duration: step
+    })
+    .setTween($baloonzRed, { scale: 1, ease: Power0.easeNone })
+    .offset(step * 2.5) //VOLONTAIRE
+    .addTo(controller);
 
-	function clearLisbonne() {
-      var clearcity2Tl = new TimelineMax();
+		    new ScrollMagic.Scene({
+		    triggerElement: "section.scene-baloonz",
+		    triggerHook: .0,
+		    duration: step / 2
+		    })
+		    .setTween($baloonzRedTxt, { autoAlpha: 1, ease: Power0.easeNone })
+		    .offset(step * 3.5) //VOLONTAIRE
+		    .addTo(controller);
 
-      clearcity2Tl
-       .set($citySection, { height: '0px', transformOrigin: "center center" })
-		.set($city, { opacity: 0, transformOrigin: "center center" })
-		.set($cityTitle, { autoAlpha: 0, x: 30, transformOrigin: "center center" })
-		.set($cityBullets, { autoAlpha: 0, x: 30, transformOrigin: "center center" })
-		.set($cityBtn, { autoAlpha: 0, transformOrigin: "center center" });
-        
-      return clearcity2Tl;
+		     new ScrollMagic.Scene({
+		    triggerElement: "section.scene-baloonz",
+		    triggerHook: .0,
+		    duration: step / 2
+		    })
+		    .setTween($sceneBaloonzCap2, { autoAlpha: 1, ease: Power0.easeNone })
+		    .offset(step * 3.5) //VOLONTAIRE
+		    .addTo(controller);
+
+
+
+	secondTl = new TimelineMax(),
+    $sunGaz = $('svg.sun-gaz'),
+    $sun = $sunGaz.find('#sun'),
+    $gaz = $sunGaz.find('#gaz'),
+    $sceneSunGazCap1 = $('.scene-sun-gaz-cap1'),
+    $sceneSunGazCap2 = $('.scene-sun-gaz-cap2');
+   
+
+    clearSecondStage();
+    function clearSecondStage() {
+        var clearSecondTl = new TimelineMax();
+
+        clearSecondTl
+            .set($sun, { autoAlpha: 0, transformOrigin: "center center" })
+            .set($gaz, { autoAlpha: 0, transformOrigin: "center center" })
+            .set($sceneSunGazCap1, { autoAlpha: 0, transformOrigin: "center center" })
+            .set($sceneSunGazCap2, { autoAlpha: 0, transformOrigin: "center center" });
+           
+
+        return clearSecondTl;
     }
 
-	var chartController = new ScrollMagic.Controller();
-
-	new ScrollMagic.Scene({
-    triggerElement: ".triggerCity2",
-    triggerHook: 0.25,
-    duration: 1
- 	})
-    .offset(0) //tip top
-    .on('enter', function (e) {
-      //alert('coucou');
-      city2Tl.play();
+  	new ScrollMagic.Scene({
+        triggerElement: 'section.scene-sun-gaz',
+        triggerHook: .2,
+        duration: step * 5
     })
-    .addIndicators()
-    .addTo(chartController);
+        .setPin('section.scene-sun-gaz', { pushFollowers: true })
+        .offset(0)
+        .addIndicators()
+        .addTo(controller);    
 
-    city2Tl
-		.to($citySection, 0.75, {height: '400px', paddingTop: '50px', paddingBottom: '50px', ease: Power2.easeOut})
-		.to($city, 0.75, {opacity: 1, ease: Power2.easeOut}, '-=0.3')
-		.to($cityOverlay, 0.5, {autoAlpha: 0, ease: Power2.easeOut}, '-=0.5')
-		.to($cityTitle, 1, {autoAlpha: 1, x: 0, ease: Power4.easeOut})
-		.staggerTo($cityBullets, 1, {autoAlpha: 1, x: 0, ease: Power4.easeOut}, 0.5, '-=0.25')
-		.to($cityBtn, 1, {autoAlpha: 1, ease: Power4.easeOut}, '-=0.5');
-	
-	//********************************************************************************
+			    new ScrollMagic.Scene({
+			    triggerElement: "section.scene-sun-gaz",
+			    triggerHook: .0,
+			    duration: step
+			    })
+			    .setTween($sun, { autoAlpha: 1, ease: Power0.easeNone })
+			    .offset(step * 0) //VOLONTAIRE
+			    .addTo(controller);
 
-	city3Tl = new TimelineMax({ paused: true });
+			    new ScrollMagic.Scene({
+			    triggerElement: "section.scene-sun-gaz",
+			    triggerHook: .0,
+			    duration: step
+			    })
+			    .setTween($sceneSunGazCap1, { autoAlpha: 1, ease: Power0.easeNone })
+			    .offset(step * 0) //VOLONTAIRE
+			    .addTo(controller);
 
-	var $citySection = $('.city-section.city3');
-	var $city = $citySection.find('.city');
-	var $cityOverlay = $city.find('.city-overlay');
-	var $cityTitle = $city.find('.city-title');
-	var $cityBullets = $city.find('li');
-	var $cityBtn = $city.find('button');
 
-	clearLisbonne();
 
-	function clearLisbonne() {
-      var clearcity3Tl = new TimelineMax();
-
-      clearcity3Tl
-       .set($citySection, { height: '0px', transformOrigin: "center center" })
-		.set($city, { opacity: 0, transformOrigin: "center center" })
-		.set($cityTitle, { autoAlpha: 0, x: 30, transformOrigin: "center center" })
-		.set($cityBullets, { autoAlpha: 0, x: 30, transformOrigin: "center center" })
-		.set($cityBtn, { autoAlpha: 0, transformOrigin: "center center" });
-        
-      return clearcity3Tl;
-    }
-
-	var chartController = new ScrollMagic.Controller();
-
-	new ScrollMagic.Scene({
-    triggerElement: ".triggerCity3",
-    triggerHook: 0.25,
-    duration: 1
- 	})
-    .offset(0) //tip top
-    .on('enter', function (e) {
-      //alert('coucou');
-      city3Tl.play();
+    new ScrollMagic.Scene({
+    triggerElement: "section.scene-sun-gaz",
+    triggerHook: .0,
+    duration: step
     })
-    .addIndicators()
-    .addTo(chartController);
+    .setTween($gaz, { autoAlpha: 1, ease: Power0.easeNone })
+    .offset(step * 2) //VOLONTAIRE
+    .addTo(controller);
 
-    city3Tl
-		.to($citySection, 0.75, {height: '400px', paddingTop: '50px', paddingBottom: '50px', ease: Power2.easeOut})
-		.to($city, 0.75, {opacity: 1, ease: Power2.easeOut}, '-=0.3')
-		.to($cityOverlay, 0.5, {autoAlpha: 0, ease: Power2.easeOut}, '-=0.5')
-		.to($cityTitle, 1, {autoAlpha: 1, x: 0, ease: Power4.easeOut})
-		.staggerTo($cityBullets, 1, {autoAlpha: 1, x: 0, ease: Power4.easeOut}, 0.5, '-=0.25')
-		.to($cityBtn, 1, {autoAlpha: 1, ease: Power4.easeOut}, '-=0.5');
-	
-	//********************************************************************************
-
-	city4Tl = new TimelineMax({ paused: true });
-
-	var $citySection = $('.city-section.city4');
-	var $city = $citySection.find('.city');
-	var $cityOverlay = $city.find('.city-overlay');
-	var $cityTitle = $city.find('.city-title');
-	var $cityBullets = $city.find('li');
-	var $cityBtn = $city.find('button');
-
-	clearLisbonne();
-
-	function clearLisbonne() {
-      var clearcity4Tl = new TimelineMax();
-
-      clearcity4Tl
-       .set($citySection, { height: '0px', transformOrigin: "center center" })
-		.set($city, { opacity: 0, transformOrigin: "center center" })
-		.set($cityTitle, { autoAlpha: 0, x: 30, transformOrigin: "center center" })
-		.set($cityBullets, { autoAlpha: 0, x: 30, transformOrigin: "center center" })
-		.set($cityBtn, { autoAlpha: 0, transformOrigin: "center center" });
-        
-      return clearcity4Tl;
-    }
-
-	var chartController = new ScrollMagic.Controller();
-
-	new ScrollMagic.Scene({
-    triggerElement: ".triggerCity4",
-    triggerHook: 0.25,
-    duration: 1
- 	})
-    .offset(0) //tip top
-    .on('enter', function (e) {
-      //alert('coucou');
-      city4Tl.play();
+      new ScrollMagic.Scene({
+    triggerElement: "section.scene-sun-gaz",
+    triggerHook: .0,
+    duration: step
     })
-    .addIndicators()
-    .addTo(chartController);
-
-    city4Tl
-		.to($citySection, 0.75, {height: '400px', paddingTop: '50px', paddingBottom: '50px', ease: Power2.easeOut})
-		.to($city, 0.75, {opacity: 1, ease: Power2.easeOut}, '-=0.3')
-		.to($cityOverlay, 0.5, {autoAlpha: 0, ease: Power2.easeOut}, '-=0.5')
-		.to($cityTitle, 1, {autoAlpha: 1, x: 0, ease: Power4.easeOut})
-		.staggerTo($cityBullets, 1, {autoAlpha: 1, x: 0, ease: Power4.easeOut}, 0.5, '-=0.25')
-		.to($cityBtn, 1, {autoAlpha: 1, ease: Power4.easeOut}, '-=0.5');
-	
-	//********************************************************************************
-
-	city5Tl = new TimelineMax({ paused: true });
-
-	var $citySection = $('.city-section.city5');
-	var $city = $citySection.find('.city');
-	var $cityOverlay = $city.find('.city-overlay');
-	var $cityTitle = $city.find('.city-title');
-	var $cityBullets = $city.find('li');
-	var $cityBtn = $city.find('button');
-
-	clearLisbonne();
-
-	function clearLisbonne() {
-      var clearcity5Tl = new TimelineMax();
-
-      clearcity5Tl
-       .set($citySection, { height: '0px', transformOrigin: "center center" })
-		.set($city, { opacity: 0, transformOrigin: "center center" })
-		.set($cityTitle, { autoAlpha: 0, x: 30, transformOrigin: "center center" })
-		.set($cityBullets, { autoAlpha: 0, x: 30, transformOrigin: "center center" })
-		.set($cityBtn, { autoAlpha: 0, transformOrigin: "center center" });
-        
-      return clearcity5Tl;
-    }
-
-	var chartController = new ScrollMagic.Controller();
-
-	new ScrollMagic.Scene({
-    triggerElement: ".triggerCity5",
-    triggerHook: 0.5,
-    duration: 1
- 	})
-    .offset(0) //tip top
-    .on('enter', function (e) {
-      //alert('coucou');
-      city5Tl.play();
-    })
-    .addIndicators()
-    .addTo(chartController);
-
-    city5Tl
-		.to($citySection, 0.75, {height: '400px', paddingTop: '50px', paddingBottom: '50px', ease: Power2.easeOut})
-		.to($city, 0.75, {opacity: 1, ease: Power2.easeOut}, '-=0.3')
-		.to($cityOverlay, 0.5, {autoAlpha: 0, ease: Power2.easeOut}, '-=0.5')
-		.to($cityTitle, 1, {autoAlpha: 1, x: 0, ease: Power4.easeOut})
-		.staggerTo($cityBullets, 1, {autoAlpha: 1, x: 0, ease: Power4.easeOut}, 0.5, '-=0.25')
-		.to($cityBtn, 1, {autoAlpha: 1, ease: Power4.easeOut}, '-=0.5');
-	
-	//********************************************************************************
-
+    .setTween($sceneSunGazCap2, { autoAlpha: 1, ease: Power0.easeNone })
+    .offset(step * 2) //VOLONTAIRE
+    .addTo(controller);
 
 });

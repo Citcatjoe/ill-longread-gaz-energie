@@ -1616,6 +1616,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/img/article/baloonz.png": {
+		"ft": 32768,
+		"iS": 9053,
+		"oA": 0,
+		"oAP": "/img/article/baloonz.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/img/article/big-cm.png": {
 		"ft": 32768,
 		"iS": 1166786,
@@ -1878,6 +1889,17 @@
 		"opt": 1,
 		"q": 100
 		},
+	"/img/article/flat.png": {
+		"ft": 32768,
+		"iS": 100730,
+		"oA": 0,
+		"oAP": "/img/article/flat.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/img/article/ga-header-lausanne.jpg": {
 		"ft": 16384,
 		"iS": 1581198,
@@ -2117,7 +2139,7 @@
 		"oAP": "/img/article/header.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/img/article/logo-cff-railway-neg.svg": {
@@ -2372,6 +2394,61 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/article/respect.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/img/article/section1.jpg": {
+		"ft": 16384,
+		"iS": 8460363,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/article/section1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/img/article/section2.jpg": {
+		"ft": 16384,
+		"iS": 11181373,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/article/section2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/img/article/section3.jpg": {
+		"ft": 16384,
+		"iS": 481249,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/article/section3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/img/article/section4.jpg": {
+		"ft": 16384,
+		"iS": 1830719,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/article/section4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/img/article/section5.jpg": {
+		"ft": 16384,
+		"iS": 6397186,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/article/section5.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
@@ -2670,6 +2747,14 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
+		},
+	"/index.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/index.html.twig",
+		"oF": 0
 		},
 	"/index.php": {
 		"cB": 0,
@@ -3123,6 +3208,183 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
+		},
+	"/prod/gaz/baloonz.png": {
+		"ft": 32768,
+		"iS": 9053,
+		"oA": 0,
+		"oAP": "/prod/gaz/baloonz.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/prod/gaz/gaz reservoir.jpg": {
+		"ft": 16384,
+		"iS": 90318,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/gaz reservoir.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/prod/gaz/gaz:shutterstock_1129553855.jpg": {
+		"ft": 16384,
+		"iS": 12891340,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/gaz:shutterstock_1129553855.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/prod/gaz/IL42_InfogGaz_01.ai": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/IL42_InfogGaz_01.ai",
+		"oF": 0
+		},
+	"/prod/gaz/IL42_InfogGaz_02.ai": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/IL42_InfogGaz_02.ai",
+		"oF": 0
+		},
+	"/prod/gaz/IL42_InfogGaz_03.ai": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/IL42_InfogGaz_03.ai",
+		"oF": 0
+		},
+	"/prod/gaz/photos gaz/ecorecyclage_01.jpg": {
+		"ft": 16384,
+		"iS": 8223148,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/photos gaz/ecorecyclage_01.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/prod/gaz/photos gaz/kMFH_Zwirnerstr_ZH_UWA umweltarena.ch (2).jpg": {
+		"ft": 16384,
+		"iS": 3826981,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/photos gaz/kMFH_Zwirnerstr_ZH_UWA umweltarena.ch (2).jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/prod/gaz/photos gaz/section1.jpg": {
+		"ft": 16384,
+		"iS": 8460363,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/photos gaz/section1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/prod/gaz/photos gaz/section2.jpg": {
+		"ft": 16384,
+		"iS": 11181373,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/photos gaz/section2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/prod/gaz/photos gaz/section4.jpg": {
+		"ft": 16384,
+		"iS": 1830719,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/photos gaz/section4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/prod/gaz/photos gaz/section5.jpg": {
+		"ft": 16384,
+		"iS": 6397186,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/photos gaz/section5.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/prod/gaz/photos gaz/© Holdigaz_Vue aérienne du site (2).JPG": {
+		"ft": 16384,
+		"iS": 7103292,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/photos gaz/© Holdigaz_Vue aérienne du site (2).jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/prod/gaz/photos hydrogene/hydrogene2.tif": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/photos hydrogene/hydrogene2.tif",
+		"oF": 0
+		},
+	"/prod/gaz/photos hydrogene/hydrogene3.tif": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/photos hydrogene/hydrogene3.tif",
+		"oF": 0
+		},
+	"/prod/gaz/photos hydrogene/hydrogène1.tif": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/photos hydrogene/hydrogène1.tif",
+		"oF": 0
+		},
+	"/prod/gaz/photos hydrogene/section3.jpg": {
+		"ft": 16384,
+		"iS": 481249,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/photos hydrogene/section3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/prod/gaz/Transition énergétique, article entier.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/prod/gaz/Transition énergétique, article entier.docx",
+		"oF": 0
 		},
 	"/prod/Les montées du plaisir_okVB.docx": {
 		"cB": 0,

@@ -1,125 +1,34 @@
-.nahum
+.scene-baloonz 
 {
-    max-width: 290px;
-
-    @include breakpoint(sm) { 
-         max-width: 100%;
-    }
+    height: 85vh;
 }
 
-.city-section
+.scene-baloonz .layout
 {
-    padding: 0;
-    overflow: hidden;
+    transform: translateY(20%);
+    width: 600px !important;
+
+    @include breakpoint(lg) { 
+            transform: translateY(15%);
+        }
+
+        @media screen and (max-width: 1281px) {
+                transform: translateY(15%);
+            }
 }
 
-.city
+.scene-sun-gaz
 {
-    position: relative;
-    background: red;
-    height: 300px;
-    padding: 40px;
-    overflow: hidden;
+    padding: 70px 0;
 
-    background-size: cover !important;
-    background-position: center 10% !important;
 
-    transform-style: preserve-3d;
-
-    @include breakpoint(xs) { 
-         padding: 20px;
+    @include breakpoint(lg) { 
+        padding: 0;
     }
 
-
-
-
-    &.city1
+    .layout 
     {
-        background: linear-gradient(51deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 70%),
-          url('../img/article/maroc.jpg');
-                    ;
-    }
-
-    &.city2
-    {
-        background: linear-gradient(51deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 70%),
-          url('../img/article/repdomi.jpg');
-                    ;
-    }
-
-    &.city3
-    {
-        background: linear-gradient(51deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 70%),
-          url('../img/article/grece.jpg');
-                    ;
-    }
-
-    &.city4
-    {
-        background: linear-gradient(51deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 70%),
-          url('../img/article/espagne.jpg');
-                    ;
-    }
-
-    &.city5
-    {
-        background: linear-gradient(51deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 90%),
-          url('../img/article/maurice.jpg');
-                    ;
-    }
-
-    .city-overlay
-    {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background: #dedede;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
-
-    .city-title
-    {
-        color: white;
-        font-family: $font2;
-        font-size: 40px;
-        font-weight: 600;
-        margin-bottom: 20px;
-        display: block;
-        transform: translateZ(0px);
-        line-height: 0.5em;
-
-        @include breakpoint(xs) { 
-             font-size: 22px;
-             line-height: 0.9em;
-             margin-top: 10px;
-             margin-bottom: 15px;
-        }
-
-        span 
-        {
-            font-size: 50%;
-            font-weight: 400;
-        }
-        
-    }
-
-    .city-list
-    {
-        color: white;
-        font-family: $font2;
-        font-weight: 400;
-        line-height: 30px;
-
-        @include breakpoint(xs) { 
-             font-size: 12px;
-             line-height: 25px;
-
-             li { margin-bottom: 7px}
-        }
-
+        transform: translateY(20%);
     }
 }
 
