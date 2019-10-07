@@ -32,12 +32,13 @@ header
     	height: 100%;
     	background: red;
     	background: url('../img/article/header.jpg');  
-		background-position: center center;
+		background-position: center bottom;
 		background-size: cover;
 
 		@include breakpoint(xs) {  
 	        background: url('../img/article/header-mobile.jpg');  
-	        background-position: center center !important;    
+	        background-position: 40% bottom !important;   
+	        background-size: cover; 
 	    }
     }
 
@@ -143,7 +144,7 @@ header
 	        {
 	            position: absolute;
 	            //top: 17%;
-	            bottom: 43%;
+	            bottom: 13%;
 	            left: 10%;
 	            //transform: translate(0, -50%);
 	            width: 80%;

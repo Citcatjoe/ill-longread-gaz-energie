@@ -2128,7 +2128,7 @@
 		"oAP": "/img/article/header-mobile.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/img/article/header.jpg": {
@@ -2411,7 +2411,7 @@
 		},
 	"/img/article/section1.jpg": {
 		"ft": 16384,
-		"iS": 8460363,
+		"iS": 219828,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/img/article/section1.jpg",
@@ -2774,20 +2774,20 @@
 		"oAP": "/index.php",
 		"oF": 0
 		},
-	"/indexLT.php": {
+	"/indexH.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/indexLT.php",
+		"oAP": "/indexH.php",
 		"oF": 0
 		},
-	"/indexOLD.php": {
+	"/indexxx.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/indexOLD.php",
+		"oAP": "/indexxx.php",
 		"oF": 0
 		},
 	"/js/animation-charts-min.js": {
@@ -3342,7 +3342,7 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/prod/gaz/photos gaz/© Holdigaz_Vue aérienne du site (2).JPG": {
+	"/prod/gaz/photos gaz/© Holdigaz_Vue aérienne du site (2).JPG": {
 		"ft": 16384,
 		"iS": 7103292,
 		"jF": 0,
@@ -3369,7 +3369,7 @@
 		"oAP": "/prod/gaz/photos hydrogene/hydrogene3.tif",
 		"oF": 0
 		},
-	"/prod/gaz/photos hydrogene/hydrogène1.tif": {
+	"/prod/gaz/photos hydrogene/hydrogène1.tif": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
@@ -3388,7 +3388,7 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/prod/gaz/Transition énergétique, article entier.docx": {
+	"/prod/gaz/Transition énergétique, article entier.docx": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
@@ -3396,7 +3396,7 @@
 		"oAP": "/prod/gaz/Transition énergétique, article entier.docx",
 		"oF": 0
 		},
-	"/prod/Les montées du plaisir_okVB.docx": {
+	"/prod/Les montées du plaisir_okVB.docx": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
@@ -10191,7 +10191,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http://localhost:8888/ill-longread-gaz-energie",
+	"externalServerAddress": "http://localhost:8080/ill-longread-gaz-energie",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

@@ -100,7 +100,7 @@ jQuery(document).ready(function($)
     }
 
     var controller = new ScrollMagic.Controller();
-    var step = 1000;
+    var step = 500;
 
      // build scene
     new ScrollMagic.Scene({
