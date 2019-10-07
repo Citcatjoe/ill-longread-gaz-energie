@@ -2,6 +2,71 @@ jQuery(document).ready(function($)
 {
 
 
+    var $counterOneVar = $('.counter-one'),
+        counterOne = false;
+    
+
+    $(window).scroll(function(){
+        if ( $counterOneVar.is(':in-viewport') && counterOne ==false) {
+            // alert('coucou');
+            $('.counter-one').counterUp({
+                delay: 10, // the delay time in ms
+                time: 3000 // the speed time in ms
+            });
+            counterOne = true;
+        }
+        
+    });
+
+    var $counterTwoVar = $('.counter-two'),
+        counterTwo = false;
+    
+
+    $(window).scroll(function(){
+        if ( $counterTwoVar.is(':in-viewport') && counterTwo ==false) {
+            // alert('coucou');
+            $('.counter-two').counterUp({
+                delay: 10, // the delay time in ms
+                time: 3000 // the speed time in ms
+            });
+            counterTwo = true;
+        }
+        
+    });
+
+    var $counterThreeVar = $('.counter-three'),
+        counterThree = false;
+    
+
+    $(window).scroll(function(){
+        if ( $counterThreeVar.is(':in-viewport') && counterThree ==false) {
+            // alert('coucou');
+            $('.counter-three').counterUp({
+                delay: 10, // the delay time in ms
+                time: 3000 // the speed time in ms
+            });
+            counterThree = true;
+        }
+        
+    });
+
+    var $counterFourVar = $('.counter-four'),
+        counterFour = false;
+    
+
+    $(window).scroll(function(){
+        if ( $counterFourVar.is(':in-viewport') && counterFour ==false) {
+            // alert('coucou');
+            $('.counter-four').counterUp({
+                delay: 10, // the delay time in ms
+                time: 3000 // the speed time in ms
+            });
+            counterFour = true;
+        }
+        
+    });
+
+
 	setTimeout(function() 
 	{
 		$('footer').nextAll('div').css('display', 'none');

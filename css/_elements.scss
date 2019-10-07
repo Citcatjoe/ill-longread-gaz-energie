@@ -1,3 +1,51 @@
+
+.block-content
+{
+    background: #f9f9f9;
+    //border: 1px solid #2ebd37;
+    border: 2px solid #b4e0b7;
+    text-align: center !important;
+    padding: 20px 20px;
+    border-radius: 15px;
+
+    @include breakpoint(md) { 
+        width: 310px;
+        float: initial !important;
+        margin: auto !important;
+        margin-bottom: 30px !important;
+    }
+
+    @include breakpoint(xs) { 
+        width: 200px
+    }
+}
+.number
+{
+    color:#2ebd37;
+    display: block;
+    font-family: Palatino;
+    font-weight: 600;
+    font-size: 75px;
+
+    @include breakpoint(xs) { 
+        font-size: 40px;
+    }
+}
+
+.number-txt
+{
+    font-family: Georgia;
+    font-size: 17px;
+    line-height: 1.3;
+    color:#2ebd37;
+    opacity: 1;
+
+    @include breakpoint(xs) { 
+        font-size: 14px;
+    }
+}
+
+
 .scene-baloonz 
 {
     height: 85vh;
@@ -16,6 +64,20 @@
                 transform: translateY(15%);
             }
 }
+
+.scene-baloonz .scene-baloonz-cap1,
+.scene-baloonz .scene-baloonz-cap2,
+.scene-sun-gaz-cap1,
+.scene-sun-gaz-cap2
+{
+    color: #2ebd37;
+    font-size: 14px;
+
+    @include breakpoint(lg) { 
+       font-size: inherit;
+    }
+}
+
 
 .scene-sun-gaz
 {
@@ -189,7 +251,7 @@ div.fixed-map-wrapper
         height: auto;
         top: 50%;
         left: 50%;
-        @include transform(translate(-50%, 125%));
+        @include transform(translate(-50%, 80%));
     }
 
 
